@@ -1,8 +1,0 @@
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
