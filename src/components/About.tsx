@@ -1,36 +1,29 @@
-import React from "react";
-import { Canvas } from "@react-three/fiber";
-import Animation from "./Animation";
-import { OrbitControls } from "@react-three/drei";
+import matt from "../images/matt.jpeg";
+import Image from "next/image";
 
-function About() {
+export default function About() {
   return (
-    <section className="flex h-screen w-full flex-col items-center justify-center lg:flex-row p-6">
-      <div className="h-full md:h-2/4 lg:h-full w-full">
-        <Canvas style={{ width: "100%", height: "100%" }}>
-          <OrbitControls enableZoom={false} />
-          <ambientLight intensity={0.5} />
-          <directionalLight position={[-2, 5, 2]} intensity={1} />
-          <Animation />
-        </Canvas>
-      </div>
-
-      <div className="h-full w-full lg:p-4 flex flex-col justify-center">
-        <h1 className="font-semibold  text-3xl md:text-4xl pt-4">
-          The technologies I use
-        </h1>
-        <h1 className="font-semibold text-lg md:text-xl py-4">
-          As a self-taught developer, I have gained a strong understanding of
-          various programming languages and technologies through hands-on
-          projects and online resources. My passion for problem-solving and
-          attention to detail allows me to quickly understand and implement new
-          concepts. I have experience building responsive web applications as
-          well as working with APIs and databases. I am always eager to take on
-          new challenges and am dedicated to constantly improving my skills.
-        </h1>
+    <section className="p-4">
+      <div className="flex flex-col md:flex-row py-4 justify-around items-center">
+        <div className="flex flex-col space-y-2 md:space-y-4 max-w-lg md:pr-4">
+          <h1 className="text-center font-semibold text-4xl pb-4">About Me</h1>
+          <p className="pb-4 max-w-4xl font-semibold md:text-lg lg:text-xl ">
+            I'm a developer who has taught myself a variety of programming
+            languages. My strengths include rapid learning of fresh ideas,
+            excelling in solving problems, and a background in constructing web
+            applications, APIs, and databases. I'm committed to constantly
+            enhancing my abilities and taking on new challenges.
+          </p>
+        </div>
+        <div className="">
+          <Image
+            src={matt}
+            className="w-full h-full object-cover max-w-3xl lg:max-w-lg rounded"
+            alt="my_tech_stack"
+            priority
+          />
+        </div>
       </div>
     </section>
   );
 }
-
-export default About;

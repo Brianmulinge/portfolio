@@ -1,27 +1,18 @@
-import React from "react";
-import { AiOutlineArrowRight } from "react-icons/ai";
+import Image from "next/image";
+import Link from "next/link";
+import email from "../images/email.svg";
 
-function Contact() {
+export default function Contact() {
   return (
-    <section className="flex  w-full flex-col items-center justify-center md:flex-row p-6 text-center">
-      <div className="">
-        <h1 className="font-bold text-4xl">Get in touch</h1>
-        <h1 className="text-base font-semibold pt-4">
-          Drop me a Message I&apos;d like to hear from you!
-        </h1>
-
-        <a
-          href="mailto:brianmulinge45@gmail.com"
-          target="_blank"
-          rel="noreferrer"
-          className="flex items-center justify-center font-bold px-6 py-4 rounded-lg border mt-4"
-        >
-          Contact Me
-          <AiOutlineArrowRight />
-        </a>
+    <section className="p-4">
+      <h1 className="font-bold text-4xl lg:text-5xl text-center"></h1>
+      <div className="flex justify-center">
+        <Link href="mailto:mattparksII@outlook.com">
+          <button className="flex items-center justify-center font-bold px-6 py-3 rounded-lg border mt-4 md:text-lg lg:text-2xl">
+            Contact me
+          </button>
+        </Link>
       </div>
     </section>
   );
 }
-
-export default Contact;

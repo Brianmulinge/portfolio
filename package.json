@@ -10,20 +10,19 @@
     "tsc": "tsc"
   },
   "dependencies": {
-    "@next/font": "13.1.6",
-    "@react-three/drei": "^9.56.5",
-    "@react-three/fiber": "^8.10.1",
-    "@types/three": "^0.148.1",
+    "@next/font": "^13.1.6",
+    "animejs": "^3.2.1",
     "eslint": "8.32.0",
     "eslint-config-next": "13.1.6",
-    "fontloader": "^1.2.7",
+    "framer-motion": "^10.6.0",
     "next": "13.1.6",
+    "npm": "^9.6.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-icons": "^4.7.1",
-    "three": "^0.149.0"
+    "react-icons": "^4.8.0"
   },
   "devDependencies": {
+    "@types/animejs": "^3.1.7",
     "@types/node": "^18.14.6",
     "@types/react": "^18.0.28",
     "autoprefixer": "^10.4.13",

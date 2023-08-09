@@ -1,31 +1,30 @@
-import portfolio from "../images/portfolio.png";
 import notelist from "../images/notelist.png";
 import securekey from "../images/securekey.png";
+import toonflix from "../images/toonflix.png";
 
 const Projectdata = [
   {
-    picture: portfolio,
-    title: "My Portfolio",
+    // picture: kickinbunts,
+    title: "Kickin Bundts",
     description:
-      "I created this portfolio to showcase my skills and projects that I have worked on. It is created using Nextjs and Tailwindcss and is hosted on Vercel.",
-    projectlink: "https://www.brianmulinge.com",
-    githublink: "https://github.com/Brianmulinge/portfolio",
-  },
-  {
-    picture: notelist,
-    title: "Notelist",
-    description:
-      "Notelist is a simple note taking app that allows you to create, edit and delete notes. It is created using Nextjs, Taiwindcss, Trpc, Prisma and Railway for the MySQL database. Users can sign in using their Google account and have access to the notes they created. The app is hosted on Railway and Vercel.",
-    projectlink: "https://notelist.vercel.app",
-    githublink: "https://github.com/Brianmulinge/notelist",
+      "Kickin Bundts, a landing page created for my personal favorite local cake selling business. Created with CSS and HTML; hosted on aws s3, offering a clean an simple ",
+    projectlink: "http://kickinbundts.com/",
   },
   {
     picture: securekey,
-    title: "Securekey",
+    title: "Concrete goodies",
     description:
-      "Securekey is a web application that creates password according to the way the user wants it. It us created using Nextjs and Tailwindcss. The app is hosted on Vercel.",
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate deleniti quod culpa molestiae eveniet unde at iure. Ab maiores neque magni quis, est aut voluptate facilis expedita laborum fugiat rem.",
     projectlink: "https://securekey.vercel.app",
     githublink: "https://github.com/Brianmulinge/securekey",
+  },
+  {
+    picture: toonflix,
+    title: "Strike",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate deleniti quod culpa molestiae eveniet unde at iure. Ab maiores neque magni quis, est aut voluptate facilis expedita laborum fugiat rem.",
+    projectlink: "https://toonflix.vercel.app",
+    githublink: "https://github.com/Brianmulinge/toonflix",
   },
 ];
 export default Projectdata;

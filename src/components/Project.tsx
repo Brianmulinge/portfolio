@@ -1,43 +1,66 @@
-import Projectdata from "../data/Projectdata";
 import Image from "next/image";
+import Projectdata from "../data/Projectdata";
+import { motion } from "framer-motion";
+import Link from "next/link";
+
+const fadeInLeft = {
+  initial: {
+    opacity: 0,
+    x: -60,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
+
+const fadeInRight = {
+  initial: {
+    opacity: 0,
+    x: 60,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
 
 export default function Project() {
   return (
-    <section className="p-6 h-full w-full">
-      <h1 className="text-4xl font-bold text-center pb-6">Projects</h1>
-      <div className="grid justify-items-center gap-4 auto-cols-auto md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 p-2">
+    <section className="p-4">
+      <h1 className="text-4xl font-bold mb-6 text-center">Projects</h1>
+      <div className="grid gap-4 grid-col md:grid-cols-2 lg:grid-cols-3">
         {Projectdata.map((project, index) => (
-          <div key={index} className="border rounded-lg">
-            <Image
-              className="rounded-t-lg"
-              src={project.picture}
-              alt={project.title}
-            />
+          <motion.div
+            key={index}
+            className="bg-neutral-700 rounded-lg overflow-hidden"
+            variants={index % 2 === 0 ? fadeInLeft : fadeInRight}
+            initial="initial"
+            animate="animate"
+          >
             <div className="p-6">
               <h2 className="text-xl font-bold mb-2">{project.title}</h2>
-              <p className="mb-4 font-semibold text-base">
-                {project.description}
-              </p>
+              <p className="mb-4">{project.description}</p>
               <div className="flex items-center">
-                <a
-                  href={project.githublink}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="border font-bold py-2 px-4 rounded"
-                >
-                  Github
-                </a>
-                <a
+                <Link
                   href={project.projectlink}
                   target="_blank"
                   rel="noreferrer"
-                  className="border font-bold py-2 px-4 rounded ml-4"
+                  className=" bg-neutral-800 text-white font-bold py-2 px-4 rounded-lg  whitespace-nowrap"
                 >
-                  Project
-                </a>
+                  Visit Project
+                </Link>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
