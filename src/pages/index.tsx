@@ -35,7 +35,6 @@ function useInView(ref: RefObject<HTMLElement>, threshold = 0.1) {
   return inView;
 }
 
-
 const fadeInLeft = {
   initial: {
     opacity: 0,
@@ -67,10 +66,8 @@ const fadeInRight = {
 };
 
 export default function Home() {
-
   const landRef = useRef<HTMLDivElement | null>(null);
   const landInView = useInView(landRef);
-
 
   const aboutRef = useRef<HTMLDivElement | null>(null);
   const aboutInView = useInView(aboutRef);
@@ -81,46 +78,44 @@ export default function Home() {
   const contactRef = useRef<HTMLDivElement | null>(null);
   const contactInView = useInView(contactRef);
   return (
-    <div className="bg-stone-800 text-white overflow-hidden">
+    <div className="bg-slate-900 text-white overflow-hidden">
       <Head>
-        <title>Brianmulinge</title>
+        <title>Matthew Parks</title>
         <meta name="description" content="My Portfolio" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="container mx-auto">
-      <motion.div
-    ref={landRef}
-    variants={fadeInRight}
-    initial={landInView ? "animate" : "initial"}
-    animate={landInView ? "animate" : "initial"}
-  >
-        <Landing />
-  </motion.div>
-      <motion.div
-    ref={aboutRef}
-    variants={fadeInLeft}
-    initial={aboutInView ? "animate" : "initial"}
-    animate={aboutInView ? "animate" : "initial"}
-  >
-    <About />
-  </motion.div>
-  <motion.div
-    ref={projectRef}
-    variants={fadeInRight}
-    initial={projectInView ? "animate" : "initial"}
-    animate={projectInView ? "animate" : "initial"}
-  >
-    <Project />
-  </motion.div>
-  <motion.div
-    ref={contactRef}
-    variants={fadeInLeft}
-    initial={contactInView ? "animate" : "initial"}
-    animate={contactInView ? "animate" : "initial"}
-  >
-    <Contact />
-  </motion.div>
+        <motion.div
+          ref={landRef}
+          variants={fadeInRight}
+          initial={landInView ? "animate" : "initial"}
+          animate={landInView ? "animate" : "initial"}
+        >
+          <Landing />
+        </motion.div>
+        <motion.div
+          ref={aboutRef}
+          variants={fadeInLeft}
+          initial={aboutInView ? "animate" : "initial"}
+          animate={aboutInView ? "animate" : "initial"}
+        >
+          <About />
+        </motion.div>
+        <motion.div
+          ref={projectRef}
+          variants={fadeInRight}
+          initial={projectInView ? "animate" : "initial"}
+          animate={projectInView ? "animate" : "initial"}
+        >
+          <Project />
+        </motion.div>
+        <motion.div
+          ref={contactRef}
+          variants={fadeInLeft}
+          initial={contactInView ? "animate" : "initial"}
+          animate={contactInView ? "animate" : "initial"}
+        ></motion.div>
       </main>
     </div>
   );

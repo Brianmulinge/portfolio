@@ -4,26 +4,25 @@ import toonflix from "../images/toonflix.png";
 
 const Projectdata = [
   {
-    picture: notelist,
-    title: "Notelist",
+    // picture: kickinbunts,
+    title: "Kickin Bundts",
     description:
-      "Notelist, a user-friendly note-taking app, enables note creation, editing, and deletion using Nextjs, Tailwindcss, Trpc, Prisma, and Railway's MySQL database. Users can access their notes via Google sign-in, with hosting on Railway and Vercel.",
-    projectlink: "https://notelist.vercel.app",
-    githublink: "https://github.com/Brianmulinge/notelist",
+      "Kickin Bundts, a landing page created for my personal favorite local cake selling business. Created with CSS and HTML; hosted on aws s3, offering a clean an simple ",
+    projectlink: "http://kickinbundts.com/",
   },
   {
     picture: securekey,
-    title: "Securekey",
+    title: "Concrete goodies",
     description:
-      "Securekey, a web app built with Nextjs and Tailwindcss, generates customized passwords for users. Hosted on Vercel, it offers a user-friendly experience.",
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate deleniti quod culpa molestiae eveniet unde at iure. Ab maiores neque magni quis, est aut voluptate facilis expedita laborum fugiat rem.",
     projectlink: "https://securekey.vercel.app",
     githublink: "https://github.com/Brianmulinge/securekey",
   },
   {
     picture: toonflix,
-    title: "Toonflix",
+    title: "Strike",
     description:
-      "Toonflix, a web app for exploring animations and their trailers, is built with Nextjs, Tailwindcss, and the TMDB API. Hosted on Vercel, providing a seamless browsing experience.",
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate deleniti quod culpa molestiae eveniet unde at iure. Ab maiores neque magni quis, est aut voluptate facilis expedita laborum fugiat rem.",
     projectlink: "https://toonflix.vercel.app",
     githublink: "https://github.com/Brianmulinge/toonflix",
   },

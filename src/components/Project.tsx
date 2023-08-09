@@ -46,7 +46,6 @@ export default function Project() {
             initial="initial"
             animate="animate"
           >
-            <Image src={project.picture} alt={project.title} priority />
             <div className="p-6">
               <h2 className="text-xl font-bold mb-2">{project.title}</h2>
               <p className="mb-4">{project.description}</p>
